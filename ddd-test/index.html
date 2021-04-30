@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Webslesson Tutorial | JSON - Dynamic Dependent Dropdown List using Jquery and Ajax</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+  <br /><br />
+  <div class="container" style="width:600px;">
+   <h2 align="center">JSON - Dynamic Dependent Dropdown List using Jquery and Ajax</h2><br /><br />
+   <select name="state" id="state" class="form-control input-lg">
+    <option value="">Select state</option>
+   </select>
+   <br />
+   <select name="district" id="district" class="form-control input-lg">
+    <option value="">Select district</option>
+   </select>
+   <br />
+   <select name="city" id="city" class="form-control input-lg">
+    <option value="">Select city</option>
+   </select>
+  </div>
+ </body>
+</html>
+
+<script>
+$(document).ready(function(){
+
+ load_json_data('state');
+
+ function load_json_data(sl, parent_id)
+ {
+  var html_code = '';
+  $.getJSON('data.json', function(data){
+
+   html_code += '<option value="">Select '+sl+'</option>';
+   $.each(data, function(key, value){
+    if(id == 'state')
+    {
+     if(value.parent_id == '0')
+     {
+      html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+     }
+    }
+    else
+    {
+     if(value.parent_id == parent_id)
+     {
+      html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+     }
+    }
+   });
+   $('#'+id).html(html_code);
+  });
+
+ }
+
+ $(document).on('change', '#state', function(){
+  var state_id = $(this).val();
+  if(state_id != '')
+  {
+   load_json_data('district', state_id);
+  }
+  else
+  {
+   $('#district').html('<option value="">Select district</option>');
+   $('#city').html('<option value="">Select city</option>');
+  }
+ });
+ $(document).on('change', '#district', function(){
+  var district_id = $(this).val();
+  if(district_id != '')
+  {
+   load_json_data('city', district_id);
+  }
+  else
+  {
+   $('#city').html('<option value="">Select city</option>');
+  }
+ });
+});
+</script>

@@ -293,6 +293,11 @@ h6 {
     }
 }
 
+.innerpage-iframe-plasma {
+    padding-top: 150px;
+    /* position: absolute; */
+}
+
 
 /*--------------------------------------------------------------
 # Back to top button

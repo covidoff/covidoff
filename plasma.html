@@ -206,25 +206,25 @@
                     <p>Enter your Details in the below form so that your requirements get accessible to the potential donors.</p>
                 </div>
 
-                <form name="drop_list" method="post" role="form" class="php-email-form">
+                <form id="drop_list" name="drop_list" method="post" role="form" class="php-email-form">
                     <div class="form-row">
                         <div class="col-md-4 form-group">
                             <!-- <select id="SubCat" name="Select District" class="form-control">
                             <option value="">Select District</option></select> -->
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email (Optional)" data-rule="email">
-                            <div class="validate"></div>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email (Optional)" data-msg="Enter valid mail id" data-rule="email">
+                            <!-- <div class="validate"></div> -->
                         </div>
                         <div class="col-md-4 form-group">
                             <!-- <select name="Category" class="form-control" onChange="SelectSubCat();">
                             <option value="">Select State</option></select> -->
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
-                            <div class="validate"></div>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" required>
+                            <!-- <div class="validate"></div> -->
                         </div>
 
 
                         <div class="col-md-4 form-group">
                             <input type="number" class="form-control" onkeypress="return isNumber(event);" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:10" data-msg="Please enter valid Phone Number without Country Code" required>
-                            <div class="validate"></div>
+                            <!-- <div class="validate"></div> -->
                         </div>
                     </div>
                     <div class="form-row">
@@ -772,6 +772,8 @@
                         fillCategory();
                     </script>
                     <div class="text-center"><button type="submit">Submit Details</button></div>
+                    <!-- <script>
+                    </script> -->
                 </form>
                 <!-- <script src="https://wzrd.in/standalone/formdata-polyfill "></script>
                 <script src="https://wzrd.in/standalone/promise-polyfill@latest "></script>
@@ -783,14 +785,21 @@
                     const form = document.forms['drop_list']
 
                     form.addEventListener('submit', e => {
-                        e.preventDefault()
-                        fetch(scriptURL, {
-                                method: 'POST',
-                                body: new FormData(form)
-                            })
-                            .then(response => console.log('Success!', response))
-                            .catch(error => console.error('Error!', error.message))
-                    })
+                            e.preventDefault()
+                            alert("Form Submitted Successfully.");
+                            fetch(scriptURL, {
+                                        method: 'POST',
+                                        body: new FormData(form)
+                                    }
+
+                                )
+                                .then(response => console.log('Success!', response))
+                                .catch(error => console.error('Error!', error.message))
+                            form.reset();
+
+                        }
+
+                    )
                 </script>
             </div>
         </section>

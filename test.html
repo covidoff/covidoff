@@ -1,24 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var spData = null;
+
+        function doData(json) {
+            spData = json.feed.entry;
+        }
+
+        function drawCell(tr, val) {
+            var td = $("<td/>");
+            tr.append(td);
+            td.append(val);
+            return td;
+        }
+
+        function drawRow(table, rowData) {
+            if (rowData == null) return null;
+            if (rowData.length == 0) return null;
+            var tr = $("<tr/>");
+            table.append(tr);
+            for (var c = 0; c < rowData.length; c++) //this is for the columns
+            {
+                drawCell(tr, rowData[c]);
+            }
+            return tr;
+        }
+
+        function drawTable(parent) {
+            var table = $("<table/>");
+            parent.append(table);
+            return table;
+        }
+
+        function readData(parent) {
+            var data = spData;
+            var table = drawTable(parent);
+            var rowData = [];
+
+            for (var r = 0; r < data.length; r++) {
+                var cell = data[r]["gs$cell"];
+                var val = cell["$t"];
+                if (cell.col == 1) {
+                    drawRow(table, rowData);
+                    rowData = [];
+                }
+                rowData.push(val);
+                // print(cell.rowData)
+                console.log(rowData)
+
+            }
+            drawRow(table, rowData);
+        }
+        $(document).ready(function() {
+            readData($("#data"));
+        });
+    </script>
+    <script src="https://spreadsheets.google.com/feeds/cells/1sYev-4vABWQDyIoQbID4cuB39mvM_paWILedO1EfBIk/1/public/values?alt=json-in-script&callback=doData"></script>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        
+        th,
+        td {
+            border: thin solid black;
+            padding: 3px;
+        }
+        
+        tr.head th,
+        tr.head td {
+            background-color: #EDEDED;
+            border-bottom: 4px double black;
+        }
+        
+        span.linetitle {
+            font-weight: bold;
+        }
+        
+        div.lineclass {
+            font-style: italic;
+        }
+        
+        .title,
+        .result {
+            width: 80%;
+        }
+        
+        .notes {
+            width: 15%;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        body {
+            margin: 12px;
+            font-size: 12px;
+        }
+    </style>
+    <style type="text/css" media="print">
+        form {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
-
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <script>
-        function goPython() {
-            $.ajax({
-                url: "stl/app.py",
-                context: document.body
-            }).done(function() {
-                alert('finished python script');;
-            });
-        }
-    </script>
+    <h1>Parse Google Spreadsheet with JavaScript</h1>
+    <div id="data" />
 </body>
 
 </html>

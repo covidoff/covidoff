@@ -228,7 +228,7 @@
 
         <!-- Form Section -->
         <section id="req" class="appointment section-bg">
-            <iframe class="innerpage-iframe-plasma" id="innerpage-iframe-plasma" src="https://covidoff.herokuapp.com/" frameborder="0" height="1080px" width="100%" marginheight="0" marginwidth="0" scrolling="no" style="overflow:hidden"></iframe>
+            <!-- <iframe class="innerpage-iframe-plasma" id="innerpage-iframe-plasma" src="https://covidoff.herokuapp.com/" frameborder="0" height="1080px" width="100%" marginheight="0" marginwidth="0" scrolling="no" style="overflow:hidden"></iframe> -->
             <style>
                 .innerpage-iframe-plasma {
                     padding-top: 0px !important;
@@ -815,7 +815,7 @@
 
 
                 <script>
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbwNZRvpTe_mc1fyEfEmYHcrLaFtjBlvga6ilnuZprVgNVTjj7v6QBTanD4JpenJ905WPg/exec'
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxFr89hnzSZ4HTjFXUragoaeSgJ58O7NZMbUAUcODGShL-l_MlGjRc2p71Z6pzHLnhn6g/exec'
                     const form = document.forms['drop_list']
 
                     form.addEventListener('submit', e => {
@@ -830,13 +830,19 @@
                 </script>
             </div>
         </section>
-        <!-- End Form Section -->
-        <section id="don" class="appointment section-bg">
+        <section id="appointment" class="appointment section-bg">
+            <!-- <iframe class="innerpage-iframe-plasma" id="innerpage-iframe-plasma" src="https://covidoff.herokuapp.com/" frameborder="0" height="1080px" width="100%" marginheight="0" marginwidth="0" scrolling="no" style="overflow:hidden"></iframe> -->
+            <style>
+                .innerpage-iframe-plasma {
+                    padding-top: 0px !important;
+                    /* position: absolute; */
+                }
+            </style>
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Add Plasma Donor Details</h2>
-                    <p>Enter your Details in the below form so that your available details can be accessible by people in plasma needs</p>
+                    <h2>Add Plasma Donor/Supplier Details</h2>
+                    <p>Enter your Details in the below form so that your requirements get accessible to the potential donors.</p>
                 </div>
 
                 <form name="drop_list" method="post" role="form" class="php-email-form">
@@ -844,19 +850,19 @@
                         <div class="col-md-4 form-group">
                             <!-- <select id="SubCat" name="Select District" class="form-control">
                             <option value="">Select District</option></select> -->
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Donor/Oraganization Email/Website (Optional)" data-rule="email">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email (Optional)" data-rule="email">
                             <div class="validate"></div>
                         </div>
                         <div class="col-md-4 form-group">
                             <!-- <select name="Category" class="form-control" onChange="SelectSubCat();">
                             <option value="">Select State</option></select> -->
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Donor/Oraganization Name " data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
                             <div class="validate"></div>
                         </div>
 
 
                         <div class="col-md-4 form-group">
-                            <input type="number" class="form-control" onkeypress="return isNumber(event);" name="phone" id="phone" placeholder="Donor/Oraganization Phone" data-rule="minlen:10" data-msg="Please enter valid Phone Number without Country Code" required>
+                            <input type="number" class="form-control" onkeypress="return isNumber(event);" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:10" data-msg="Please enter valid Phone Number without Country Code" required>
                             <div class="validate"></div>
                         </div>
                     </div>
@@ -871,7 +877,7 @@
                             <div class="validate"></div>
                         </div>
                         <div class="col-md-4 form-group">
-                            <input type="number" class="form-control" onkeypress="return isNumber(event);" name="age" id="age" placeholder="Age (Optional)" data-rule="maxlen:2" data-msg="Enter Valid Age" required>
+                            <input type="number" class="form-control" onkeypress="return isNumber(event);" name="age" id="age" placeholder="Age" data-rule="maxlen:2" data-msg="Enter Valid Age" required>
                             <div class="validate"></div>
                         </div>
                         <div class="col-md-4 form-group">
@@ -1412,7 +1418,7 @@
 
 
                 <script>
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxFr89hnzSZ4HTjFXUragoaeSgJ58O7NZMbUAUcODGShL-l_MlGjRc2p71Z6pzHLnhn6g/exec'
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbwNZRvpTe_mc1fyEfEmYHcrLaFtjBlvga6ilnuZprVgNVTjj7v6QBTanD4JpenJ905WPg/exec'
                     const form = document.forms['drop_list']
 
                     form.addEventListener('submit', e => {

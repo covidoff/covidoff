@@ -1370,6 +1370,41 @@ section {
     margin-left: 8px;
 }
 
+
+/* Doctors 2 */
+
+.doctors .member .social2 {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.doctors .member .social2 a {
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 23px;
+    height: 23px;
+    background: #a0bcd5;
+}
+
+.doctors .member .social2 a i {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 2px;
+}
+
+.doctors .member .social2 a:hover {
+    background: #1977cc;
+}
+
+.doctors .member .social2 a+a {
+    margin-left: 8px;
+}
+
 @media (max-width:992px) {
     .doctors {
         padding-top: 230px;

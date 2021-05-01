@@ -180,8 +180,8 @@
         <div class="container">
             <h1>Details Adding Portal</h1>
             <h2>Add the Details of Donor, Requirements & Supplier</br>to help others and add in our portal.</h2>
-            <a href="#req" class="btn-get-started scrollto">Add Details of Requirements</a>
-            <a href="require-plasma.html#appointment" class="btn-get-started scrollto">Add Details of Donors</a>
+            <a href="require-plasma.html#appointment" class="btn-get-started scrollto">Add Details of Requirements</a>
+            <a href="add-plasma-details.html#req" class="btn-get-started scrollto">Add Details of Donors</a>
         </div>
     </section>
     <!-- End Hero -->
@@ -251,7 +251,7 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Add Plasma Requirements</h2>
+                    <h2>Add Plasma Donor/Supplier Details</h2>
                     <p>Enter your Details in the below form so that your requirements get accessible to the potential donors.
                     </p>
                 </div>
@@ -836,12 +836,14 @@
 
                     form.addEventListener('submit', e => {
                         e.preventDefault()
+                        alert("Form Submitted Successfully. ");
                         fetch(scriptURL, {
                                 method: 'POST',
                                 body: new FormData(form)
                             })
                             .then(response => console.log('Success!', response))
                             .catch(error => console.error('Error!', error.message))
+                        form.reset();
                     })
                 </script>
             </div>

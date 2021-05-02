@@ -1106,6 +1106,12 @@ section {
     font-size: 14px;
 }
 
+@media (max-width: 992px) {
+    .counts .section-title {
+        margin-top: -25px !important;
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Appointments

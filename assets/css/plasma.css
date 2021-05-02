@@ -1302,6 +1302,10 @@ section {
     }
 }
 
+.dual-form {
+    margin-top: -50px;
+}
+
 .appointment .php-email-form {
     width: 100%;
 }

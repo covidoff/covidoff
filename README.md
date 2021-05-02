@@ -36,7 +36,7 @@
 > This is the Portal for all the Data Resources. These resources are filled by general people. Verification at utmost level is not guaranteed. So, we are constantly trying to improve the data system and gather more knowledge in Data Mining. 
 
 ### Want to Contribute?
-Just go through the [contribution guidelines](https://github.com/covidoff/covidoff/blob/main/CONTRIBUTING.md) to get started with your contributions.
+Just go through the **[contribution guidelines](https://github.com/covidoff/covidoff/blob/main/CONTRIBUTING.md)** to get started with your contributions.
 
 ### License
 By contributing, you agree that your contributions will be licensed under its [MIT Lisence](https://github.com/covidoff/covidoff/blob/main/LICENSE).

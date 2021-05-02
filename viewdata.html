@@ -5,18 +5,18 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>CovidOff</title>
+    <title>View Data - CovidOff</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-
     <!-- Templated Favicons -->
     <!-- <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-H270KENGBH"></script> -->
+
     <script language="javascript" src="ddd-test/list.js"></script>
-    <!-- <script language="javascript" src="ddd-test/list2.js"></script>
+    <!-- <script language="javascript" src="ddd-test/list2.js"></script> -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-H270KENGBH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -225,228 +225,162 @@
     <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center">
-        <div class="container">
-            <h1>Require Plasma</h1>
-            <h2>Access all the Donors who can<br>possibly help you.<br> Can't find? Register Your Details</h2>
-            <a href="#why-us" class="btn-get-started scrollto">Get Started</a>
-        </div>
-    </section>
     <!-- End Hero -->
 
     <main id="main">
 
         <!-- ======= Why Us Section ======= -->
-        <section id="why-us" class="why-us">
-            <div class="container">
 
-                <div class="row">
-                    <div class="col-lg-4 d-flex align-items-stretch">
-                        <div class="content">
-                            <h3>Do your patient need Plasma?</h3>
-                            <p>
-                                If your patient needs plasma, click here to see available donors/supplier or in other cases, register your requirements in our portal.
-                            </p>
-                            <div class="text-center">
-                                <a href="require-plasma.html" class="more-btn">View Donors <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 d-flex align-items-stretch">
-                        <div class="content2">
-                            <h3>Do you want to donate Plasma?</h3>
-                            <p>
-                                Click here to see requirements ofplasma and match your donation bloodgroup or else you can register for plasma donation details.
-                            </p>
-                            <div class="text-center">
-                                <a href="donate-plasma.html" class="more-btn">Requirements <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 d-flex align-items-stretch">
-                        <div class="content2">
-                            <h3>Plasma Donors & Requirements</h3>
-                            <p>
-                                If you know someone or some organization that may help in plasma needs or want to register some other requirements for plasma, click here.
-                            </p>
-                            <div class="text-center">
-                                <a href="add-plasma-details.html" class="more-btn">Add Details <i
-                                        class="bx bx-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- End .content-->
-                </div>
-            </div>
-
-            </div>
-        </section>
         <!-- End Why Us Section -->
-
+        <iframe class="innerpage-iframe-plasma" id="innerpage-iframe-plasma" src="https://covidoff.herokuapp.com/" frameborder="0" height="1080px" width="100%" marginheight="0" marginwidth="0" scrolling="no" style="overflow:hidden"></iframe>
         <!-- Form Section -->
-        <section id="appointment" class="appointment section-bg">
-            <iframe class="innerpage-iframe-plasma" id="innerpage-iframe-plasma" src="https://covidoff.herokuapp.com/" frameborder="0" height="1080px" width="100%" marginheight="0" marginwidth="0" scrolling="no" style="overflow:hidden"></iframe>
-            <style>
-                .innerpage-iframe-plasma {
-                    padding-top: 0px !important;
-                    /* position: absolute; */
-                }
-            </style>
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Couldn't Find a Donor Match?</h2>
-                    <p>Enter your Details in the below form so that your requirements get accessible to the potential donors.
-                    </p>
-                </div>
-
-                <form action="forms/plasma.php" method="post" role="form" class="php-email-form">
-                    <div class="form-row">
-                        <div class="col-md-4 form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                            <div class="validate"></div>
-                        </div>
-                        <div class="col-md-4 form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email (Optional)" data-rule="email" data-msg="Please enter a valid email">
-                            <div class="validate"></div>
-                        </div>
-                        <div class="col-md-4 form-group">
-                            <input type="text" class="form-control" onkeypress="return isNumber(event);" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:10" data-msg="Please enter valid Phone Number without Country Code">
-                            <div class="validate"></div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-4 form-group">
-                            <select name="department" id="department" class="form-control">
-                                <option value="">Select State</option>
-                                <option value="Department 1">Department 1</option>
-                                <option value="Department 2">Department 2</option>
-                                <option value="Department 3">Department 3</option>
-                            </select>
-                            <div class="validate"></div>
-                        </div>
-                        <div class="col-md-4 form-group">
-                            <select name="department" id="department" class="form-control">
-                                <option value="">Select District</option>
-                                <option value="Department 1">Department 1</option>
-                                <option value="Department 2">Department 2</option>
-                                <option value="Department 3">Department 3</option>
-                            </select>
-                            <div class="validate"></div>
-                        </div>
-                        <div class="col-md-4 form-group">
-                            <select name="doctor" id="doctor" class="form-control">
-                                <option value="">Select City</option>
-                                <option value="Doctor 1">Doctor 1</option>
-                                <option value="Doctor 2">Doctor 2</option>
-                                <option value="Doctor 3">Doctor 3</option>
-                            </select>
-                            <div class="validate"></div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-                        <div class="validate"></div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-                    </div>
-                    <div class="text-center"><button type="submit">Make an Appointment</button></div>
-                </form>
-
-            </div>
-        </section>
-        <!-- End Form Section -->
-
-        <!-- ======= Contact Section ======= -->
-        <!-- <section id="contact" class="contact">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Contact</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
-                        quidem hic quas.</p>
-                </div>
-            </div>
-
-            <div>
-                <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                    frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class="container">
-                <div class="row mt-5">
-
-                    <div class="col-lg-4">
-                        <div class="info">
-                            <div class="address">
-                                <i class="icofont-google-map"></i>
-                                <h4>Location:</h4>
-                                <p>A108 Adam Street, New York, NY 535022</p>
-                            </div>
-
-                            <div class="email">
-                                <i class="icofont-envelope"></i>
-                                <h4>Email:</h4>
-                                <p>info@example.com</p>
-                            </div>
-
-                            <div class="phone">
-                                <i class="icofont-phone"></i>
-                                <h4>Call:</h4>
-                                <p>+1 5589 55488 55s</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-8 mt-5 mt-lg-0">
-
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                            <div class="form-row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                    <div class="validate"></div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                <div class="validate"></div>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                <div class="validate"></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
-                        </form>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section> -->
-        <!-- End Contact Section -->
 
     </main>
     <!-- End #main -->
+    <section id="about" class="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch">
+                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+                </div>
 
+                <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                    <h3>How to use the View Data Portal</h3>
+                    <p>
+                        Welcome to Covidoff View Data Portal. Follow the Below Steps to View you required related Data. For the People. By the People. Off the People.
+                    </p>
+
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-data"></i></div>
+                        <h4 class="title"><a href="#">Choose your Requirement from the Dropdown
+                                Given Above.</a></h4>
+                        <p class="description">
+                            There are Seven Options as Services. Plasma Requirements, Plasma Donors. Oxygen Requirements. Oxygen Donors. Bed Availability. Remdesivr Availability, Other Resources.
+                        </p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-health"></i></div>
+                        <h4 class="title"><a href="#services">Choose either 'View Full Data' or 'View Filtered Data'
+                                (Filtered by Ditrict)</a></h4>
+                        <p class="description">
+                            Choose View Full Data to see all the Datas that are available there related to that particular service in our Database and choose view filtered data to sort data by District (or Blood Group in case of Plasma Requirements or Donors).
+                        </p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-atom"></i></div>
+                        <h4 class="title"><a href="contribute.covidoff.live">If you Chose 'View Filtered Data', Select
+                                Ditrict from Drop Down.</a></h4>
+                        <p class="description">
+                            If you want to find Data from West Bengal's Districts then there is a direct option to selcet a West Bengal Distrcit but in other cases, you have to choose 'Not Listed' at the end of the Drop Down, then enter your Distrcit name, if it matches with any
+                            entries of our database, it will be showed accordingly.
+                        </p>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-question-mark"></i></div>
+                        <h4 class="title"><a href="contribute.covidoff.live">FAQ: "I couldn't find a leads District
+                                outside West Bengal, that was previously there." </a></h4>
+                        <p class="description">
+                            If there are any conflicted leads that are reported to us or any lead requirement that is fullfilled and reported to us, we remove that from our database. You can see the full database choosing the View Full Data option to get a better clarity
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="why-us" class="why-us">
+        <div class="section-title viewdata">
+            <style>
+                @media (max-width:992px) {
+                    .viewdata {
+                        margin-top: -50px;
+                        margin-left: 20px;
+                        margin-right: 20px;
+                    }
+                }
+            </style>
+            <h2>Couldn't Find your required data? Follow the below Buttons to add your leads.
+            </h2>
+
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <style>
+                    @media (max-width: 992px) {
+                        .row {
+                            z-index: 2;
+                            margin-top: -50px;
+                        }
+                    }
+                </style>
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="content2">
+                        <h3>Add Plasma Requirements</h3>
+
+                        <div class="text-center">
+                            <a href="add-plasma-details.html#req" class="more-btn">Add <i
+                                    class="bx bx-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="content">
+                        <h3>Add Plasma Donor details</h3>
+
+                        <div class="text-center">
+                            <a href="require-plasma.html#appointment" class="more-btn">Add <i
+                                    class="bx bx-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="content2">
+                        <h3>Add Oxygen Requirements</h3>
+
+                        <div class="text-center">
+                            <a href="oxygen.html#form" class="more-btn">Add <i class="bx bx-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="content">
+                        <h3>Add Oxygen Suppliers</h3>
+
+                        <div class="text-center">
+                            <a href="oxygen-supply.html#form" class="more-btn">Add <i
+                                    class="bx bx-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="content2">
+                        <h3>Add Bed Availability</h3>
+
+                        <div class="text-center">
+                            <a href="add-bed-details.html#appointment" class="more-btn">Add <i
+                                    class="bx bx-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="content">
+                        <h3>Add Remdesivr Availability</h3>
+
+                        <div class="text-center">
+                            <a href="remdesivr.html#appointment" class="more-btn">Add <i
+                                    class="bx bx-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End .content-->
+            </div>
+        </div>
+
+        </div>
+    </section>
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="footer-top">

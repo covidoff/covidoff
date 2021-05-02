@@ -1292,6 +1292,20 @@ section {
 # Appointments
 --------------------------------------------------------------*/
 
+.appointment {
+    margin-top: 230px;
+}
+
+@media (max-width: 992px) {
+    .appointment {
+        margin-top: -20px;
+    }
+}
+
+.dual-form {
+    margin-top: -50px;
+}
+
 .appointment .php-email-form {
     width: 100%;
 }

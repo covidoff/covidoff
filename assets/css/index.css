@@ -1106,6 +1106,12 @@ section {
     font-size: 14px;
 }
 
+@media (max-width: 992px) {
+    .counts .section-title {
+        margin-top: -25px !important;
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Appointments
@@ -1285,7 +1291,10 @@ section {
 .doctors .member {
     position: relative;
     box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 10px;
 }
 
@@ -1304,7 +1313,8 @@ section {
 }
 
 .doctors .member .member-info {
-    padding-left: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .doctors .member h4 {

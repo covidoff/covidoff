@@ -7,9 +7,6 @@
 ### The existing social problem in brief
 > So many people are dying or suffering in this Pandemic due to failure at lead  generation. We are not able to view and solve our doubts and get confused under certain compelling circumstances in this Covid Pandemic. We need to get a portal that helps and manages all these things in the easiest way possible
 
-### Target Citizen (Who will be benefited from your solution, mention that)
->Any family or lead who are being affected by the curse of Covid-19 and want to take help of medical resources or want to add their data to generate leads to increase the chances of getting connected to a donor or helper.
-
 ### Review of present systems to encounter the problem
 > All the present systems use a system that is hard to break further to analyze and shows filtered data only.
 
@@ -34,6 +31,10 @@
 
 ### Conclusion
 > This is the Portal for all the Data Resources. These resources are filled by general people. Verification at utmost level is not guaranteed. So, we are constantly trying to improve the data system and gather more knowledge in Data Mining. 
+
+### Maintainers
+- [Manish Kumar Barnwal](https://github.com/imanishbarnwal)
+- [Sagnik Mitra](https://github.com/sagnikmitra)
 
 ### Want to Contribute?
 Just go through the **[contribution guidelines](https://github.com/covidoff/covidoff/blob/main/CONTRIBUTING.md)** to get started with your contributions.

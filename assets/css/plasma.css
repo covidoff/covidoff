@@ -990,6 +990,21 @@ section {
     color: #848484;
 }
 
+.why-us .adddata-content {
+    margin-bottom: 2rem;
+}
+
+
+@media (max-width: 768px) {
+.why-us .adddata-content {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+}
+
 
 /*--------------------------------------------------------------
 # About

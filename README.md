@@ -1,7 +1,7 @@
 ![covidoff](covidoff.png)
 
 ## Website: https://covidoff.live
-## Data Resource Portal: https://covidoff.herokuapp.com
+## Data Resource Portal: https://covidoff.live/viewdata.html
 <br>
 
 ### The existing social problem in brief

@@ -1,0 +1,45 @@
+<div id="header">
+    Send Form's data as JSON
+</div>
+
+<body>
+    <form action="/gettingdata" method="post">
+        Name:<input type="text" name="usrid" /><br> Phone:
+        <input type="text" name="usrphone" /><br> RData:
+        <input type=="text" name="usrdata" /><br>
+        <input type="submit" value="Submit">
+        <script>
+            var express = require('express');
+            var app = express();
+
+            //jade --> ejs -->html 
+            app.engine('html', require('ejs').renderFile);
+            app.set('views', path.join(__dirname, 'views'));
+            app.set('view engine', 'html');
+
+            var jsonfile = require('jsonfile');
+            var file = './userdata.json'
+
+
+            //trying to write via form to json
+            app.post('/gettingdata', function(req, res) {
+                var user_id = req.body.usrid;
+                var token = req.body.usrphone;
+                var geo = req.body.usrdata;
+
+                //start writing
+                var obj = {
+                    name: user_id,
+                    phone: token,
+                    adress: geo
+                }
+                jsonfile.writeFileSync(file, obj, {
+                    flag: 'a'
+                });
+
+                //default
+                //res.send(user_id + ' ' + token + ' ' + geo);
+            });
+        </script>
+    </form>
+</body>

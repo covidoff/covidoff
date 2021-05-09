@@ -1,0 +1,12 @@
+matplotlib==3.3.4
+oauth2client==4.1.3
+pandas==1.2.2
+gspread==3.7.0
+bokeh==2.2.3
+Flask==1.1.1
+numpy==1.20.1
+openpyxl==3.0.7
+gspread_dataframe==3.2.1
+streamlit==0.80.0
+streamlit_bokeh_events==0.1.2
+Pillow==8.2.0

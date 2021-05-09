@@ -29,7 +29,7 @@ if selected == "Choose from the DropDown":
 if selected == "View Plasma Requirements":
 
     sht2 = gc.open_by_url(
-        'https://docs.google.com/spreadsheets/d/1kcj_u4j9269CcdQGXuLzdU-WzrtWdR5vdOEwN7-46JM/edit#gid=0')
+        'https://docs.google.com/spreadsheets/d/spreadsheet_url/edit#gid=0')
     worksheet = sht2.sheet1
     df2 = get_as_dataframe(worksheet)
     df2 = df2[df2['phone'].notna()]

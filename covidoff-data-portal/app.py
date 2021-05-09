@@ -1,24 +1,14 @@
-from flask import Flask, render_template_string, request, redirect
-from openpyxl import load_workbook
-import openpyxl as pxl
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from bokeh.models.widgets import Button
-from bokeh.models import CustomJS
-from streamlit_bokeh_events import streamlit_bokeh_events
-from io import StringIO
-from PIL import Image
 from gspread_dataframe import get_as_dataframe, set_with_dataframe
-
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name(
-    'file_name_cant_be_shared_due_to_privacy_issues.json', scope)
+    'covidoff-ecef33b9fe0b.json', scope)
 gc = gspread.authorize(credentials)
 st.write("# **CovidOff View Data Portal**")
 st.write("This is the Portal for all the Data Resources. These resources are filled by general people. Verification at utmostlevel is not guaranteed. Select your required service from the below dropdown")
@@ -29,7 +19,7 @@ if selected == "Choose from the DropDown":
 if selected == "View Plasma Requirements":
 
     sht2 = gc.open_by_url(
-        'https://docs.google.com/spreadsheets/d/spreadsheet_url/edit#gid=0')
+        'https://docs.google.com/spreadsheets/d/1kcj_u4j9269CcdQGXuLzdU-WzrtWdR5vdOEwN7-46JM/edit#gid=0')
     worksheet = sht2.sheet1
     df2 = get_as_dataframe(worksheet)
     df2 = df2[df2['phone'].notna()]

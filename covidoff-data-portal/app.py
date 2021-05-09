@@ -18,7 +18,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name(
-    'covidoff-ecef33b9fe0b.json', scope)
+    'file_name_cant_be_shared_due_to_privacy_issues.json', scope)
 gc = gspread.authorize(credentials)
 st.write("# **CovidOff View Data Portal**")
 st.write("This is the Portal for all the Data Resources. These resources are filled by general people. Verification at utmostlevel is not guaranteed. Select your required service from the below dropdown")

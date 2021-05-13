@@ -1,4 +1,13 @@
-![covidoff](covidoff.png)
+<h1 align="center">CovidOff</h1>
+<p align="center"><img src="https://github.com/covidoff/covidoff/blob/main/logo.png" alt="Logo" width="150px" height="150px" hspace="10"/><br>
+<p align="center">    
+    <img src=https://img.shields.io/github/license/covidoff/covidoff>  
+    <a href="http://makeapullrequest.com" target="_blank"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs Welcome"></a>
+<!--     <img alt= "GitHub Hacktoberfest combined status" src="https://img.shields.io/github/hacktoberfest/2020/neil-dev/YouSafe"> -->
+    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/covidoff/covidoff">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/covidoff/covidoff">
+</p>
+<br>
 
 ## Website: https://covidoff.live
 ## Data Resource Portal: https://covidoff.live/viewdata.html
@@ -40,4 +49,4 @@
 Just go through the **[contribution guidelines](https://github.com/covidoff/covidoff/blob/main/CONTRIBUTING.md)** to get started with your contributions.
 
 ### License
-By contributing, you agree that your contributions will be licensed under its [MIT Lisence](https://github.com/covidoff/covidoff/blob/main/LICENSE).
+By contributing, you agree that your contributions will be licensed under its [Apache-2.0](https://github.com/covidoff/covidoff/blob/main/LICENSE).

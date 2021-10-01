@@ -3,7 +3,7 @@
 <p align="center">    
     <img src=https://img.shields.io/github/license/covidoff/covidoff>  
     <a href="http://makeapullrequest.com" target="_blank"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs Welcome"></a>
-<!--     <img alt= "GitHub Hacktoberfest combined status" src="https://img.shields.io/github/hacktoberfest/2020/neil-dev/YouSafe"> -->
+    <img alt="GitHub Forks" src="https://img.shields.io/github/forks/covidoff/covidoff">
     <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/covidoff/covidoff">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/covidoff/covidoff">
 </p>

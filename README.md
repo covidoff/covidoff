@@ -28,7 +28,7 @@
 ### Technical skill required for developing such a system
 > Tech Stacks Used:
   - **FrontEnd:** HTML, CSS, JS, Bootstrap, SCSS, Streamlit, JQuery
-  - **Backend:** Streamlit, Python, PHP, Heroku-CLI, Ajax
+  - **Backend:** Streamlit, Python, Heroku-CLI, Ajax
   - **Database:** JSON, Gspread-dataframe, Openpyxl, Gspread
   - **Tools:** Git, GitHub, VSCode
   - **API:** Google Drive API, Google Sheet API, Twitter API

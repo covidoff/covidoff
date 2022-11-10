@@ -9,8 +9,8 @@
 </p>
 <br>
 
-## Website: https://covidoff.live
-## Data Resource Portal: https://covidoff.live/viewdata.html
+## Website: [covidoff.live](https://covidoff.github.io/covidoff/)
+## Data Resource Portal: [covidoff.live/viewdata.html](https://covidoff.github.io/covidoff/viewdata.html)
 <br>
 
 ### The existing social problem in brief
